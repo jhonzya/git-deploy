@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bulma.min.css')
+  body
+    nav.navbar.is-dark
+      .navbar-menu.container
+        .navbar-start
+          a.navbar-item(href="/")= 'Deploy'
+    .container
+      section.section
+        block content
