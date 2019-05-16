@@ -1,0 +1,15 @@
+var config = {};
+
+// Configured repositories to work with
+// also allow configuration in a per-branch basis
+config.repos = {
+    'remote_name': {
+        'secret': process.env.GITHUB_SECRET || false,
+        'branches': {
+            'master': '/path/to/master',
+            'develop': '/path/to/develop',
+        }
+    }
+};
+
+module.exports = config;
