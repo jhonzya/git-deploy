@@ -52,7 +52,11 @@ var self = module.exports = {
 
         // Read .deployfile
         try{
-            if( fs.existsSync(file) ){
+            if (fs.existsSync(file+'.'+data.target) ){
+                commands = fs.readFileSync(file+'.'+data.target, 'utf8');
+                commands = JSON.parse(commands).update;
+            }
+            else if( fs.existsSync(file) ){
                 commands = fs.readFileSync(file, 'utf8');
                 commands = JSON.parse(commands).update;
             }

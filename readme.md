@@ -21,3 +21,7 @@ automatiza el proceso de deploy en múltiples repositorios
 
 #### Uso
 - `yarn start`, o equivalentes
+
+
+#### deployfile
+    - los repositorios deben tener un archivo `.deployfile` o `.deployfile.{branch}`
