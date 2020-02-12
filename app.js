@@ -46,7 +46,6 @@ var checkRepo = (req, res, next) => {
 
   const ref = match[2];
   if( !(ref in config.repos[repoName].branches) ){
-    res.status(404);
     return res.json({
       'msg': `Repo with name (${repoName}) and branch (${ref}) is not configured`
     });
