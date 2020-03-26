@@ -23,6 +23,7 @@ var self = module.exports = {
             'warning': 'alert'
         };
 
+        str = `${process.env.name}: ${str}`
         if( !(type in types) ) type = 'log';
         console[type](time, str);
 
